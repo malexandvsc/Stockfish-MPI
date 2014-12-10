@@ -1,13 +1,9 @@
 ### MPI
 
-Stockfish-MPI is an attempt to parallelize Stockfish using MPI (Message Passing Interface)
-
-This is my final project for CSE 40822 (Cloud Computing)
-
-Stockfish-MPI is meant to run on clusters or cloud instances*
-
-It has been tested on AWS running Ubuntu
-
+Stockfish-MPI is an attempt to parallelize Stockfish using MPI (Message Passing Interface).
+This is my final project for CSE 40822 (Cloud Computing).
+Stockfish-MPI is meant to run on clusters or cloud instances*.
+It has been tested on AWS running Ubuntu.
 
 *Instances not included
 
