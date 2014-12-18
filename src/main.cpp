@@ -18,7 +18,7 @@
 */
 
 #include <iostream>
-
+#include <mpi.h>
 #include "bitboard.h"
 #include "evaluate.h"
 #include "position.h"
@@ -30,7 +30,11 @@
 int main(int argc, char* argv[]) {
 
   std::cout << engine_info() << std::endl;
-
+  
+  MPI_Status mpi_status;
+  MPI_Init(&argc, &argv);
+  MPI_Comm_size(MPI_COMM_WORLD, &numtasks);
+  MPI_Comm_rank(MPI_COMM_WORLD, &taskid);
   UCI::init(Options);
   Bitboards::init();
   Position::init();
@@ -44,4 +48,5 @@ int main(int argc, char* argv[]) {
   UCI::loop(argc, argv);
 
   Threads.exit();
+  MPI_Finalize();
 }
