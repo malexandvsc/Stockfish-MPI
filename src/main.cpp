@@ -27,6 +27,8 @@
 #include "tt.h"
 #include "uci.h"
 
+int numtasks, taskid;
+
 int main(int argc, char* argv[]) {
 
   std::cout << engine_info() << std::endl;
